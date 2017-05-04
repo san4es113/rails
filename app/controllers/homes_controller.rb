@@ -1,10 +1,10 @@
 class HomesController < ApplicationController
 
 
-def index
+	def index
+		
 
-
-end
+	end
 
 
 
