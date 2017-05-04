@@ -13,7 +13,7 @@ class InfosController < ApplicationController
                             :width => 50,
                             :height => 50
                             })
-            
+    marker.infowindow infos.user.email
     end
   end
 
