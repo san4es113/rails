@@ -11,13 +11,16 @@
 .welcomepage{
 	height:1000px;
 }
-.allpage .page .content{
+.allpage .frame .page{
 	margin: 20px;
-	background-color: lightgrey;
+	background-color: lightgray;
+}
+.allpage .frame .content{
+	margin: 20px;
+	
 }
 
-
-.allpage .page{
+.allpage .frame{
 	margin: 10px;
-	background-color: lightgrey;
+	
 }
