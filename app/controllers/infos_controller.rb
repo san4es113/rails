@@ -8,6 +8,12 @@ class InfosController < ApplicationController
     @hash = Gmaps4rails.build_markers(@infos) do |infos, marker|
       marker.lat infos.latitude
       marker.lng infos.longitude
+      marker.picture({
+                            :url => "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+                            :width => 50,
+                            :height => 50
+                            })
+            
     end
   end
 
