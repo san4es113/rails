@@ -24,7 +24,7 @@ class InfosController < ApplicationController
   # POST /infos
   # POST /infos.json
   def create
-    @info = curent_user.infos.new(info_params)
+    @info = current_user.infos.new(info_params)
 
     respond_to do |format|
       if @info.save
