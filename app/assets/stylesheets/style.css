@@ -1,6 +1,23 @@
-.welcomepage{
+.allpage{
 	background: url("https://lorempixel.com/city/1580/1100");
-	width:100%;
-	height:1100px;
 	background-repeat: no-repeat;
+}
+
+.container_middle{
+	height:750px;
+	margin:50px;
+}
+
+.welcomepage{
+	height:1000px;
+}
+.allpage .page .content{
+	margin: 20px;
+	background-color: lightgrey;
+}
+
+
+.allpage .page{
+	margin: 10px;
+	background-color: lightgrey;
 }

@@ -6,60 +6,67 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      
-	      <ul class="nav navbar-nav">
-	      <li>
-			   <%= link_to 'My lieblings network' , 'home' %>
-			   </li>
-			   </ul>
-		
-	    </div>
-	            
-		      <% if user_signed_in? %>
-		      		<ul class="nav navbar-nav">
-		      			<li>
-			      			<%= link_to 'My profile' , infos_path%>
-			      		</li>
-			      	</ul>
-			      <ul class="nav navbar-nav navbar-right">
-			      		<li>
-			      			<%= link_to 'Sign out' , destroy_user_session_path, method: :delete %>
-
-			      		</li>
-			      		<li>
-			      			<%= link_to 'Edit user data' , edit_user_registration_path%>
-			      		</li>
-	 				</ul>
-		      <%else%>
-				      <ul class="nav navbar-nav navbar-right">
-			 				<li>
-			 					<%= link_to 'Sign up' , new_user_registration_path  %>
-			 				</li>
-				      		<li>
-				      			<%= link_to 'Sign in' , new_user_session_path  %>	
-				      		</li>
-				      		
-				      	</ul>
-		      <% end %>
+<div class="allpage">
+	<header>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
 		      
-	      
-	    </ul>
-	  </div>
-	</nav>
+		      <ul class="nav navbar-nav">
+		      <li>
+				   <%= link_to 'My lieblings network' , '/home' %>
+				   </li>
+				   </ul>
+			
+		    </div>
+		            
+			      <% if user_signed_in? %>
+			      		<ul class="nav navbar-nav">
+			      			<li>
+				      			<%= link_to 'My profile' , infos_path %>
+				      		</li>
+				      	</ul>
+				      <ul class="nav navbar-nav navbar-right">
+				      		<li>
+				      			<%= link_to 'Sign out' , destroy_user_session_path, method: :delete %>
+
+				      		</li>
+				      		<li>
+				      			<%= link_to 'Edit user data' , edit_user_registration_path%>
+				      		</li>
+		 				</ul>
+			      <%else%>
+					      <ul class="nav navbar-nav navbar-right">
+				 				<li>
+				 					<%= link_to 'Sign up' , registration_path  %>
+				 				</li>
+					      		<li>
+					      			<%= link_to 'Sign in' , new_user_session_path  %>	
+					      		</li>
+					      		
+					      	</ul>
+			      <% end %>
+			      
+		      
+		    </ul>
+		  </div>
+		</nav>
+	</header>
 
 
+<div class="page">
+	<div class="content">
+		<%= yield %>
+	</div>
+</div>
+
+<footer>
 
 
-<%= yield %>
+</footer>
 
-</body>
+
+</div>
 </html>
 
- <% if !user_signed_in? %>
-	<%=  render :template => "homes/index"%> 
- <% end %>
+ 

@@ -20,6 +20,7 @@ class InfosController < ApplicationController
   # GET /infos/1
   # GET /infos/1.json
   def show
+
   end
 
   # GET /infos/new

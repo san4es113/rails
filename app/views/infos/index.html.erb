@@ -8,10 +8,10 @@
 
     <p id="notice"><%= notice %></p>
 
-    <h1>Listing Infos</h1>
+    <h1>Welcome to us</h1>
 
     <table class="table table-striped">
-      <thead>
+     <thead>
         <tr>
           <th>User</th>
           <th>Birthday</th>
@@ -20,14 +20,16 @@
           <th>Longitude</th>
           <th>Email</th>
           <th>Description</th>
+          <th>Make</th>
           <th colspan="3"></th>
         </tr>
-      </thead>
 
-      <tbody>
+    </thead>
+<tbody>
         <% @infos.each do |info| %>
+
           <tr>
-            <td><%= info.user_id %></td>
+            <td><%= info.user.email %></td>
             <td><%= info.birthday %></td>
             <td><%= info.address %></td>
             <td><%= info.latitude %></td>
@@ -39,14 +41,15 @@
             <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
-      </tbody>
+
+        </tbody>
     </table>
 
-    <br>
+    
 
-    <%= link_to 'New Info', new_info_path %>
+   
 
-
+<%= button_to 'add new home place', new_info_path, :method => :get %>
 
     <div style='width: 800px;'>
       <div id="map" style='width: 800px; height: 400px;'></div>
