@@ -51,3 +51,5 @@ end
 
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'gmaps4rails'
+gem 'geocoder'

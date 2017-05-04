@@ -16,26 +16,34 @@
 	    <ul class="nav navbar-nav">
 	      <li class="active"><a href="#">Home</a></li>
 	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
+	     
 	     
 		      <% if user_signed_in? %>
-		      		<li>
-		      			<%= link_to 'Sign_out' , destroy_user_session_path, method: :delete %>
-		      		</li>
-		      		<li>
-		      			<%= link_to 'Edit_user_data' , edit_user_registration_path%>
-		      		</li>
-
+		      		<ul class="nav navbar-nav">
+		      			<li>
+			      			<%= link_to 'My_profile' , infos_path%>
+			      		</li>
+			      	</ul>
+			      <ul class="nav navbar-nav navbar-right">
+			      		<li>
+			      			<%= link_to 'Sign_out' , destroy_user_session_path, method: :delete %>
+			      		</li>
+			      		<li>
+			      			<%= link_to 'Edit_user_data' , edit_user_registration_path%>
+			      		</li>
+	 				</ul>
 		      <%else%>
-	 				<li>
-	 					<%= link_to 'Sign_up' , new_user_registration_path  %>
-	 				</li>
-		      		<li>
-		      			<%= link_to 'Sign_in' , new_user_session_path  %>	
-		      		</li>
+				      <ul class="nav navbar-nav navbar-right">
+			 				<li>
+			 					<%= link_to 'Sign_up' , new_user_registration_path  %>
+			 				</li>
+				      		<li>
+				      			<%= link_to 'Sign_in' , new_user_session_path  %>	
+				      		</li>
+				      	</ul>
 		      <% end %>
 		      
-	      </ul>
+	      
 	    </ul>
 	  </div>
 	</nav>
