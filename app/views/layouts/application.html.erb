@@ -51,9 +51,14 @@
 
 
 <div class="frame">
+<% if request.url=="https://mylieblingsnetwork.herokuapp.com/home"|| request.url=="https://mylieblingsnetwork.herokuapp.com"%>
+	<%= yield %>
+ <% else %>
 	<div class="page">
 <%= yield %>
 	</div>
+
+  <% end %>
 </div>
 <footer>
 
