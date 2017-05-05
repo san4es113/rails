@@ -14,16 +14,11 @@
 .allpage .frame .page{
 
 	background-color: lightgrey;
-	
-	position: absolute;
-    top:  50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+text-align: center;
+   height: 1000px;
+   margin-top: 40px;
 }
-.allpage .frame .content{
-	margin: 20px;
-	
-}
+
 
 .allpage .frame{
 	margin: 10px;
