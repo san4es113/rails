@@ -8,12 +8,15 @@ class InfosController < ApplicationController
     @hash = Gmaps4rails.build_markers(@infos) do |infos, marker|
       marker.lat infos.latitude
       marker.lng infos.longitude
+      marker.infowindow infos.email
     end
   end
 
   # GET /infos/1
   # GET /infos/1.json
   def show
+    @info=Info.last
+      mail=Mailer.new_mailer(@info).deliver_now; 
   end
 
   # GET /infos/new
