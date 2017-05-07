@@ -1,7 +1,8 @@
 languages
   rubyonrails
   css/html
-
+ JavaScript 
+ 
 databases
   pg
 another gem
