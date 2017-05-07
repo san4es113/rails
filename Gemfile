@@ -53,3 +53,8 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'gmaps4rails'
 gem 'geocoder'
+
+gem 'carrierwave', '~>1.0'
+gem 'paperclip' , '~>4.2'
+
+gem 'sidekiq'

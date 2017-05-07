@@ -16,12 +16,21 @@
 	      <li><%= link_to 'My lieblings network' , '/home' %></li>
 				   
 	      </div>
-	     
-	     
+	     <% if user_signed_in? && current_user.email=="admin@gmail.com" %>
+	     <ul class="nav navbar-nav">
+	     				<li>
+			      			<%= link_to 'News' , news_path%>
+			      		</li>
+			      		</ul>
+		<% end %>
 		      <% if user_signed_in? %>
 		      		<ul class="nav navbar-nav">
 		      			<li>
 			      			<%= link_to 'My_profile' , infos_path%>
+			      		</li>
+			      		
+			      		<li>
+			      			<%= link_to 'Phostos' , photos_path%>
 			      		</li>
 			      	</ul>
 			      <ul class="nav navbar-nav navbar-right">

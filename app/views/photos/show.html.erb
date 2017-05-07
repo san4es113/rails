@@ -1,0 +1,36 @@
+ <% if user_signed_in? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @photo.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @photo.user_id %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @photo.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @photo.longitude %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @photo.address %>
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>
+<%end %>

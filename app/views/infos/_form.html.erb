@@ -27,8 +27,14 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  
+    <div class="field">
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <div class="g-recaptcha" data-sitekey="6Le2HhwUAAAAAHx2lirkFmFjCG1p270fCbtmvqMW" style="margin-left:37%;"></div>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
