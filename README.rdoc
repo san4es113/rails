@@ -1,28 +1,23 @@
-== README
+rubyonrails
+css/html
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+databases
+  pg
+another gem
+  devise
+frontend
+  bootstrap-sass
 
-Things you may want to cover:
+find users by name of town(for find new friends and mark photos by places)
+  gmaps4rails
+  geocoder
+upload files on server(for project like instagram)
+  carrierwave
+  paperclip
+behaivor process 
+  sidekiq
+  redis
+  also you can find work with smtp (1-st like a main process(after registration on input mail arrived message) ,2-nd like a behaivor
+  (greetings with birthday)
+  
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
