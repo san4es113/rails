@@ -1,5 +1,6 @@
-rubyonrails
-css/html
+languages
+  rubyonrails
+  css/html
 
 databases
   pg
